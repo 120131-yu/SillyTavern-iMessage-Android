@@ -1,2 +1,90 @@
-# SillyTavern-iMessage-Android
-作者pervertir的SillyTavern-iMessage 主题安卓端修复补丁
+# 安卓专属 iMessage 酒馆主题修复版
+
+> 🍁**重要声明：** 这是一个非官方的魔改版。
+> 原作者项目地址：[pervertir/SillyTavern-iMessage](https://github.com/pervertir/SillyTavern-iMessage)
+> 本仓库旨在修复原版在安卓设备（特别是使用套壳App或 WebView 浏览器时）出现的各种显示异常和交互 Bug，调整代码使其在安卓设备上也接近苹果的 iMessage 。
+
+🍁由 Claude Opus 4.5、DeepSeek R1 以及作者倾情奉献。
+
+## 🎃核心修复内容（真机实测）
+
+### 🎃🎃 输入框彻底重构
+1. 彻底解决安卓端输入框上半截被莫名切掉的问题。
+2. 把变扁的发送键重写成了完美的正圆形、浅蓝灰底色。
+3. 在输入框左侧重构了一个独立的加号，点击可呼出扩展菜单。
+4. 去掉点击时自带的奇怪蓝框以及右下角的 `//` 拖拽手柄残留。
+5. 重写输入框代码使其更有苹果简洁对称风格，抬升输入框使其不会被手机底部圆角遮挡。
+
+### 🎃🎃 聊天气泡的深度微调（仿苹果 iOS 16）
+1. 调整气泡的圆角弧度、距屏幕边缘距离、气泡间距离、换行规则。
+2. 重新选择了字体，调整字号、字粗细、字间距、行高以及气泡的内边距（字离气泡上下与左右的距离）。
+
+### 🎃🎃 交互逻辑 Bug 修复
+1. 原版点击进 Edit 的任意一级，只有 Done 键无返回键，Done 会直接关掉整个面板，而安卓手机的屏幕右滑是直接退出整个网页。现在修复为正常的逐级返回。
+2. 修复触摸穿透，解决了点击消息弹出的操作栏瞬间消失的 Bug。
+3. 修复滚动 Bug，删除了原版在安卓上使用后会使屏幕乱闪的“一键划到对话底部”悬浮按钮，改为每次进入对话自动滚动到最新消息。
+4. 去掉了酒馆自带的粗黑滚动条。
+5. 关闭 Emoji 渲染，优化了安卓端的性能。
+
+### 🎃🎃 中文适配
+1. 在原作者纯英文的基础上，手动加入了中文翻译，实现了中英双语显示（要关掉酒馆那个自带的难用中文翻译）。
+
+### 🎃🎃 视觉与色彩
+1. 将全局强调色改为了深紫色，气泡和按键颜色重新进行了选择（原作者设置了可在主题内自由调整为喜欢的颜色）。
+
+## 🍁 安装说明
+1. 下载最新的 `.zip` 压缩包。
+2. 解压得到 `SillyTavern-iMessage` 文件夹。
+3. 将它放入酒馆目录：`data/default-user/extensions/third-party/`。
+4. 刷新酒馆，在扩展菜单中开启 `iMessage Theme` 即可。
+
+> 🍁🍁 **注意：** 千万别套娃！点进 `SillyTavern-iMessage` 文件夹必须直接看到 `css`、`src` 和 `index.js`。
+
+🚫**纯免费分享，严禁倒卖！**
+
+---
+
+# iMessage Theme for SillyTavern - Android Exclusive Fix
+
+> 🍁**Important Notice:** This is an UNOFFICIAL modified fork.
+> Original project repository: [pervertir/SillyTavern-iMessage](https://github.com/pervertir/SillyTavern-iMessage)
+> This repository aims to fix various display anomalies and interaction bugs in the original version on Android devices (especially when using shell apps or WebView browsers), adjusting the code to make it closer to Apple's iMessage on Android as well.
+
+🍁Proudly crafted with Claude Opus 4.5, DeepSeek R1, and the author.
+
+## 🎃 Core Fixes (Real Device Tested)
+
+### 🎃🎃 Complete Input Box Reconstruction
+1. Completely fixed the issue where the top half of the input box was strangely cut off on Android.
+2. Rewrote the flattened send button into a perfect circle with a light blue-gray background.
+3. Reconstructed an independent plus button on the left side of the input box, which can be clicked to call out the extension menu.
+4. Removed the weird blue focus outline when clicking and the `//` drag handle residue in the bottom right corner.
+5. Rewrote the input box code to make it more Apple-like, simple, and symmetrical, and raised the input box so it won't be blocked by the rounded corners at the bottom of the phone.
+
+### 🎃🎃 Deep Fine-Tuning of Chat Bubbles (Imitating Apple iOS 16)
+1. Adjusted the bubble's corner radius, distance from the screen edge, distance between bubbles, and text wrapping rules.
+2. Reselected the font, adjusted the font size, font weight, letter spacing, line height, and the inner padding of the bubble (the distance between the text and the top/bottom/left/right of the bubble).
+
+### 🎃🎃 Interaction Logic & Bug Fixes
+1. In the original version, when entering any level of the "Edit" panel, there was only a "Done" button and no "Back" button. Clicking "Done" would directly close the entire panel, and swiping right on an Android screen would directly exit the entire webpage. Now it is fixed to return level by level normally.
+2. Fixed touch penetration, resolving the bug where the action bar that pops up when clicking a message disappears instantly.
+3. Fixed the scrolling bug: removed the floating "jump to bottom of the chat" button which caused the screen to flicker wildly on Android, and changed it to automatically scroll to the latest message every time you enter a chat.
+4. Removed the thick black scrollbar that comes with SillyTavern.
+5. Disabled Emoji rendering to optimize performance on Android.
+
+### 🎃🎃 Chinese Localization
+1. Based on the original author's pure English version, manually added Chinese translations to achieve bilingual (Chinese/English) display (Make sure to turn off the hard-to-use built-in Chinese translation in SillyTavern).
+
+### 🎃🎃 Visuals & Colors
+1. Changed the global accent color to a deep purple, and reselected the colors for bubbles and buttons (The original author designed it so users can freely adjust to their favorite colors within the theme).
+
+## 🍁 Installation Instructions
+1. Download the latest `.zip` archive.
+2. Extract it to get the `SillyTavern-iMessage` folder.
+3. Place it into the SillyTavern directory: `data/default-user/extensions/third-party/`.
+4. Refresh SillyTavern and enable `iMessage Theme` in the extensions menu.
+
+> 🍁🍁 **Warning:** Do NOT nest the folders! When you click into the `SillyTavern-iMessage` folder, you must directly see the `css`, `src`, and `index.js`.
+
+🚫**Completely free to share, strictly prohibited from reselling!**
+
