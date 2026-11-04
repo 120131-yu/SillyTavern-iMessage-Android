@@ -20,12 +20,12 @@
 2. 重新选择了字体，调整字号、字粗细、字间距、行高以及气泡的内边距（字离气泡上下与左右的距离）。
 
 ### 🎃🎃 交互逻辑 Bug 修复
-1. 原版点击进 Edit 的任意一级，只有 Done 键无返回键，Done 会直接关掉整个面板，而安卓手机的屏幕右滑是直接退出整个网页。现在修复为正常的逐级返回。
-2. 修复触摸穿透，解决了点击消息弹出的操作栏瞬间消失的 Bug。
-3. 修复滚动 Bug，删除了原版在安卓上使用后会使屏幕乱闪的“一键划到对话底部”悬浮按钮，改为每次进入对话自动滚动到最新消息。
-4. 去掉了酒馆自带的粗黑滚动条。
-5. 关闭 Emoji 渲染，优化了安卓端的性能。
-
+1. 彻底解决了原版在安卓套壳环境（WebView）下，因网络拦截或缓存污染所导致的“新建角色卡时的JSON 报错”问题。修正了发送给服务器的部分数据类型，并为列表刷新增加了异常捕获。
+2. 原版点击进 Edit 的任意一级，只有 Done 键无返回键，Done 会直接关掉整个面板，而安卓手机的屏幕右滑是直接退出整个网页。现在修复为正常的逐级返回。
+3. 修复触摸穿透，解决了点击消息弹出的操作栏瞬间消失的 Bug。
+4. 修复滚动 Bug，删除了原版在安卓上使用后会使屏幕乱闪的“一键划到对话底部”悬浮按钮，改为每次进入对话自动滚动到最新消息。
+5. 去掉了酒馆自带的粗黑滚动条。
+6. 关闭 Emoji 渲染，优化了安卓端的性能。
 ### 🎃🎃 中文适配
 1. 在原作者纯英文的基础上，手动加入了中文翻译，实现了中英双语显示（要关掉酒馆那个自带的难用中文翻译）。
 
@@ -66,11 +66,12 @@
 2. Reselected the font, adjusted the font size, font weight, letter spacing, line height, and the inner padding of the bubble (the distance between the text and the top/bottom/left/right of the bubble).
 
 ### 🎃🎃 Interaction Logic & Bug Fixes
-1. In the original version, when entering any level of the "Edit" panel, there was only a "Done" button and no "Back" button. Clicking "Done" would directly close the entire panel, and swiping right on an Android screen would directly exit the entire webpage. Now it is fixed to return level by level normally.
-2. Fixed touch penetration, resolving the bug where the action bar that pops up when clicking a message disappears instantly.
-3. Fixed the scrolling bug: removed the floating "jump to bottom of the chat" button which caused the screen to flicker wildly on Android, and changed it to automatically scroll to the latest message every time you enter a chat.
-4. Removed the thick black scrollbar that comes with SillyTavern.
-5. Disabled Emoji rendering to optimize performance on Android.
+1. Completely fixed the "JSON error when creating a new character card" issue in the original version under Android wrapper environments (WebView), which was caused by network interception or cache pollution. Corrected some data types sent to the server and added exception handling for list refreshing.
+2. In the original version, clicking into any level of Edit only had a "Done" button but no "Back" button. "Done" would directly close the entire panel, and swiping right on Android would exit the whole page. Now fixed for proper step-by-step back navigation.
+3. Fixed touch-through issues and resolved the bug where the action bar instantly disappeared when tapping a message.
+4. Fixed scrolling bugs. Removed the "jump to bottom" floating button from the original version (which caused screen flickering on Android), and replaced it with automatically scrolling to the latest message when entering a chat.
+5. Removed the default thick black scrollbar from SillyTavern.
+6. Disabled Emoji rendering to optimize Android performance.
 
 ### 🎃🎃 Chinese Localization
 1. Based on the original author's pure English version, manually added Chinese translations to achieve bilingual (Chinese/English) display (Make sure to turn off the hard-to-use built-in Chinese translation in SillyTavern).
