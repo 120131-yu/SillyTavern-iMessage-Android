@@ -4,7 +4,7 @@
 > 原作者项目地址：[pervertir/SillyTavern-iMessage](https://github.com/pervertir/SillyTavern-iMessage)
 > 本仓库旨在修复原版在安卓设备（特别是使用套壳App或 WebView 浏览器时）出现的各种显示异常和交互 Bug，调整代码使其在安卓设备上也接近苹果的 iMessage 。
 
-🍁由 Claude Opus 4.5、DeepSeek R1 以及作者倾情奉献。
+🍁由 Claude Opus 4.5、DeepSeek R1 以及120131-yu倾情奉献。
 
 ## 🎃核心修复内容（真机实测）
 
